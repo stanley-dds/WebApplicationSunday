@@ -1,0 +1,16 @@
+﻿@model WebApplicationSunday.Models.InformationModel
+
+@{
+    ViewData["Title"] = "AddInformation";
+}
+
+<h1>Add Information</h1>
+
+<form asp-controller="Information" asp-action="AddInformation" method="post">
+    <div class="form-group">
+        <label asp-for="Information"></label>
+        <input asp-for="Information" class="form-control" />
+        <span asp-validation-for="Information" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
